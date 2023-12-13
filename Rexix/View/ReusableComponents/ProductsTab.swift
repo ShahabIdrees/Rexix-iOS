@@ -17,7 +17,12 @@ struct ProductsTab: View {
         ScrollView {
             VStack(spacing: 10) {
                 ForEach(products) { product in
-                    ProductTabItem(product: product).padding(.horizontal, 5)
+                    NavigationLink {
+                        ProductView()
+                    } label: {
+                        ProductTabItem(product: product).padding(.horizontal, 5)
+                    }
+
                 }
             }
             .padding(.vertical, 10)

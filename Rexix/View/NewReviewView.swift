@@ -81,7 +81,7 @@ struct NewReviewView: View {
                             .padding(.horizontal)
 
                         Image(systemName: "plus")
-                            .resizable()    
+                            .resizable()
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(.secondary)
                             .frame(width: 40, height: 40)

@@ -202,7 +202,7 @@ struct ReviewView: View {
     @ObservedObject var viewModel = ReviewViewModel()
     
     var body: some View {
-        NavigationView {
+        
             ScrollView {
                 ForEach(viewModel.reviewList, id: \.id) { item in
                     NavigationLink(destination: ReviewDetailsView(currentReview: item)) {
@@ -213,8 +213,15 @@ struct ReviewView: View {
             .background(Color.clear)
             .listStyle(PlainListStyle())
             .navigationTitle("Rexix")
-            .navigationBarTitleDisplayMode(.large)
-        }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing:
+                            NavigationLink(destination: NewReviewView()) {
+                                Image(systemName: "plus")
+                                    .foregroundColor(.blue)
+                                    .padding()
+                            }
+                        )
+        
     }
 }
 

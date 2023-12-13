@@ -21,36 +21,38 @@ struct ContentView: View {
     }
     
     var body: some View{
-        
-        if !isLoggedIn {
-            LoginView(isLoggedIn: self.$isLoggedIn )
-        }
-        else {
-            ZStack{
-                VStack{
-                    TabView(selection: $selectedTab) {
-                        switch selectedTab {
-                        case .house:
-                            HomeView()
-                        case .message:
-                            ReviewView()
-                        case .person:
-                            ProfileView()
-                        case .magnifyingglass:
-                            //SignupView(isLoggedIn: self.$isLoggedIn)
-                            SearchView()
-                        case .gearshape:
-                            SettingsView()
+        NavigationView {
+            
+            
+            if !isLoggedIn {
+                LoginView(isLoggedIn: self.$isLoggedIn )
+            }
+            else {
+                ZStack{
+                    VStack{
+                        TabView(selection: $selectedTab) {
+                            switch selectedTab {
+                            case .house:
+                                HomeView()
+                            case .message:
+                                ReviewView()
+                            case .person:
+                                ProfileView()
+                            case .magnifyingglass:
+                                //SignupView(isLoggedIn: self.$isLoggedIn)
+                                SearchView()
+                            case .gearshape:
+                                SettingsView()
+                            }
                         }
                     }
-                }
-                VStack{
-                    Spacer()
-                    CustomTabBar(selectedTab: $selectedTab).offset(y:25)
+                    VStack{
+                        Spacer()
+                        CustomTabBar(selectedTab: $selectedTab).offset(y:25)
+                    }
                 }
             }
         }
-        
         
         
 //        NavigationStack {

@@ -5,7 +5,6 @@ struct ProfileView: View {
     @State private var isFollowersViewActive: Bool = false
     
     var body: some View {
-        NavigationView {
             ScrollView {
                 VStack {
                     Image("CoverPhoto")
@@ -47,7 +46,7 @@ struct ProfileView: View {
                 .frame(maxHeight: .infinity)
             }
             .navigationBarHidden(true)
-        }
+        
     }
 }
 

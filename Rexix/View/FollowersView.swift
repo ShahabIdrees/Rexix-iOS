@@ -31,7 +31,6 @@ struct FollowersView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        NavigationView {
             VStack {
                 Picker(selection: $selectedTab, label: Text("Followers")) {
                     Text("Followers").tag(0)
@@ -53,7 +52,7 @@ struct FollowersView: View {
                 .navigationBarTitleDisplayMode(.large)
             }
             .padding(.vertical, 8)
-        }
+        
     }
 }
 

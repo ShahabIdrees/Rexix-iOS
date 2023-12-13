@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        NavigationView {
             Form {
                 Section(header: Text("App Settings")) {
                     Toggle("Notifications", isOn: .constant(true))
@@ -37,7 +36,7 @@ struct SettingsView: View {
                 }
             }
             .navigationBarTitle("Settings")
-        }
+        
     }
 }
 
