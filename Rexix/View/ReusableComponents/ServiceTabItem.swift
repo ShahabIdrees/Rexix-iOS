@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Service: Identifiable{
     var id = UUID()
-    var imageName: String = "Person2"
+    var imageName: String = "appletv"
     var name: String = "Apple Tv+"
     var rating: Double = 3.9
 }
@@ -36,26 +36,26 @@ struct ServiceTabItem: View {
                 .resizable()
                 .frame(width: 200, height: 200)
                 .clipped()
-                .clipShape(RoundedCorner(radius: 10, corners: [.topLeft, .topRight])).padding([.leading, .trailing, .top], -10)
-
+                .clipShape(RoundedCorner(radius: 10, corners: [.topLeft, .topRight]))
+                .padding([.leading, .trailing, .top], -10)
             VStack(alignment: .leading, spacing: 8) {
                 Text(service.name)
                     .font(.headline)
                     .padding([.leading, .trailing], 8)
-                    .fixedSize(horizontal: false, vertical: true) // Allow the name to wrap to the next line if needed
+                    .fixedSize(horizontal: false, vertical: true)
 
                 Text(String(format: "Rating: %.1f", service.rating))
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .padding([.leading, .trailing, .bottom], 8)
-                    .fixedSize(horizontal: false, vertical: true) // Allow the rating to wrap to the next line if needed
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
         .padding(8)
-        .background(Color.white)
+        .background(Color(.systemBackground))
         .cornerRadius(10)
-        .shadow(radius: 5)
-        .frame(maxWidth: .infinity) // Set the maximum width
+        .shadow(color: .secondary, radius: 3)
+        .frame(minWidth: 150, minHeight: 250) // Set the minimum width and height
     }
 }
 

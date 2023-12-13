@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ImageCarousel: View {
-    var images: [String] = ["Person1", "Person2", "Person3", "Person4"]
-    let timer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
+    var images: [String] = ["15profront", "15proback", "15proleft", "15proright","15proangled", "15proangled2", "15protop", "15probottom"]
     @State private var selectedImageIndex: Int = 0
     
     var body: some View {
@@ -26,7 +25,7 @@ struct ImageCarousel: View {
                             .tag(index)
                             .aspectRatio(1.6, contentMode: .fill)
                             .frame(width: UIScreen.main.bounds.width)
-                            .cornerRadius(10)
+                            //.cornerRadius(10)
                             .clipped()
                     }
                     //.background(VisualEffectBlur()) // Step 8: Apply Visual Effect Blur
@@ -34,7 +33,7 @@ struct ImageCarousel: View {
                 }
             }
             .frame(height: 300)
-            .cornerRadius(10)
+            //.cornerRadius(10)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) // Step 11: Customize TabView Style
             .ignoresSafeArea()
             
@@ -43,8 +42,8 @@ struct ImageCarousel: View {
                 ForEach(0..<images.count, id: \.self) { index in
                     // Step 13: Create Navigation Dots
                     Circle()
-                        .fill(Color.primary.opacity(selectedImageIndex == index ? 1 : 0.33))
-                        .frame(width: 10, height: 10)
+                        .fill(Color.secondary.opacity(selectedImageIndex == index ? 1 : 0.33))
+                        .frame(width: 6, height: 6)
                         .onTapGesture {
                             // Step 14: Handle Navigation Dot Taps
                             selectedImageIndex = index
@@ -53,12 +52,12 @@ struct ImageCarousel: View {
                 .offset(y: 170) // Step 15: Adjust Dots Position
             }
         }
-        .onReceive(timer) { _ in
-            // Step 16: Auto-Scrolling Logic
-            withAnimation(.default) {
-                selectedImageIndex = (selectedImageIndex + 1) % images.count
-            }
-        }
+//        .onReceive(timer) { _ in
+//            // Step 16: Auto-Scrolling Logic
+//            withAnimation(.default) {
+//                selectedImageIndex = (selectedImageIndex + 1) % images.count
+//            }
+//        }
     }
 }
 

@@ -15,6 +15,7 @@
 		184BF01D2B21C7F100A4DF04 /* FollowersComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF01C2B21C7F100A4DF04 /* FollowersComponent.swift */; };
 		184BF01F2B21CAA600A4DF04 /* UserPostsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF01E2B21CAA600A4DF04 /* UserPostsComponent.swift */; };
 		1851B1792B04B2DA00A8DF72 /* LikeDislikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851B1782B04B2DA00A8DF72 /* LikeDislikeView.swift */; };
+		1851FB062B29CAE10036428E /* NewReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB052B29CAE10036428E /* NewReviewView.swift */; };
 		185C82C92AFA29F400091481 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C82C82AFA29F400091481 /* Review.swift */; };
 		185C82CB2AFA3AF200091481 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C82CA2AFA3AF200091481 /* CustomTabBar.swift */; };
 		185C82CD2AFA49E200091481 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C82CC2AFA49E200091481 /* ReviewView.swift */; };
@@ -44,6 +45,8 @@
 		18CD3E0D2B27472300DB30D0 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD3E0C2B27472300DB30D0 /* ProductItemView.swift */; };
 		18CD3E0F2B2747D200DB30D0 /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD3E0E2B2747D200DB30D0 /* CategoryCardView.swift */; };
 		18CD3E112B274A6E00DB30D0 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD3E102B274A6E00DB30D0 /* AboutView.swift */; };
+		18E2860D2B299A2800BF291C /* ProductStatsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E2860C2B299A2800BF291C /* ProductStatsComponent.swift */; };
+		18E2860F2B299A4E00BF291C /* BrandStatsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E2860E2B299A4E00BF291C /* BrandStatsComponent.swift */; };
 		18E72BD82AF904D400D73827 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E72BD72AF904D400D73827 /* Person.swift */; };
 		18E72BDA2AF9059900D73827 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E72BD92AF9059900D73827 /* LoginView.swift */; };
 		18E72BDC2AF90F5400D73827 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E72BDB2AF90F5400D73827 /* SignupView.swift */; };
@@ -69,6 +72,7 @@
 		184BF01C2B21C7F100A4DF04 /* FollowersComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersComponent.swift; sourceTree = "<group>"; };
 		184BF01E2B21CAA600A4DF04 /* UserPostsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsComponent.swift; sourceTree = "<group>"; };
 		1851B1782B04B2DA00A8DF72 /* LikeDislikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDislikeView.swift; sourceTree = "<group>"; };
+		1851FB052B29CAE10036428E /* NewReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewView.swift; sourceTree = "<group>"; };
 		185C82C82AFA29F400091481 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		185C82CA2AFA3AF200091481 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		185C82CC2AFA49E200091481 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		18CD3E0C2B27472300DB30D0 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		18CD3E0E2B2747D200DB30D0 /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
 		18CD3E102B274A6E00DB30D0 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		18E2860C2B299A2800BF291C /* ProductStatsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStatsComponent.swift; sourceTree = "<group>"; };
+		18E2860E2B299A4E00BF291C /* BrandStatsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandStatsComponent.swift; sourceTree = "<group>"; };
 		18E72BD72AF904D400D73827 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		18E72BD92AF9059900D73827 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		18E72BDB2AF90F5400D73827 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 				18CD3E102B274A6E00DB30D0 /* AboutView.swift */,
 				1864C27E2B284C5E00B3204E /* BrandProfileView.swift */,
 				185F7AD82B289A6900E4B283 /* ProductView.swift */,
+				1851FB052B29CAE10036428E /* NewReviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +196,8 @@
 				185F7AD42B2881DE00E4B283 /* ServiceTabItem.swift */,
 				185F7AD62B28900100E4B283 /* ReviewTabItem.swift */,
 				185F7ADA2B28A2E600E4B283 /* ImageCarousel.swift */,
+				18E2860C2B299A2800BF291C /* ProductStatsComponent.swift */,
+				18E2860E2B299A4E00BF291C /* BrandStatsComponent.swift */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 				18CD3E0B2B26F43A00DB30D0 /* FollowersView.swift in Sources */,
 				1851B1792B04B2DA00A8DF72 /* LikeDislikeView.swift in Sources */,
 				18CB3BD62AF8C02E00905CA4 /* Persistence.swift in Sources */,
+				18E2860D2B299A2800BF291C /* ProductStatsComponent.swift in Sources */,
 				185F7AD52B2881DE00E4B283 /* ServiceTabItem.swift in Sources */,
 				184BF0192B21AA5E00A4DF04 /* CloseFriends.swift in Sources */,
 				1864C2872B285AA800B3204E /* ProductTabItem.swift in Sources */,
@@ -336,9 +346,11 @@
 				18B87A0F2B03B0F80019D1F7 /* Reply.swift in Sources */,
 				185C82CD2AFA49E200091481 /* ReviewView.swift in Sources */,
 				18C24E7A2AFBA690004CB648 /* customProgressBar.swift in Sources */,
+				18E2860F2B299A4E00BF291C /* BrandStatsComponent.swift in Sources */,
 				18CD3E0D2B27472300DB30D0 /* ProductItemView.swift in Sources */,
 				188ABF0A2AFB836E00BF3196 /* ReviewDetailsView.swift in Sources */,
 				185C82C92AFA29F400091481 /* Review.swift in Sources */,
+				1851FB062B29CAE10036428E /* NewReviewView.swift in Sources */,
 				184BF01B2B21B02800A4DF04 /* FriendComponent.swift in Sources */,
 				185C82D12AFA4A1F00091481 /* SettingsView.swift in Sources */,
 				184BF01D2B21C7F100A4DF04 /* FollowersComponent.swift in Sources */,

@@ -15,6 +15,7 @@ struct ServicesTab: View {
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)], spacing: 16) {
                 ForEach(services) { service in
                     ServiceTabItem(service: service)
+                        .padding() // Add padding to each ServiceTabItem
                 }
             }
             .padding()

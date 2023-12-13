@@ -14,7 +14,7 @@ struct ProductItemView: View {
 
             // Text Section
             VStack(alignment: .leading, spacing: 5) {
-                NavigationLink(destination: ProductView(images: ["Person1", "Person2", "Person3", "Person4"])){
+                NavigationLink(destination: ProductView()){
                     Text(product.name)
                         .font(.headline)
                         .fontWeight(.bold)

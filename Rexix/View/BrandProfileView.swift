@@ -16,25 +16,26 @@ struct BrandProfileView: View {
 
                     // Brand Name and Tagline
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Brand Name")
+                        Text("Apple")
                             .font(.title)
                             .fontWeight(.bold)
 
-                        Text("Tagline")
+                        Text("Do more for less")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
                 }
+                BrandStatsComponent(customerCount: 293838, reviewCount: 909049, rating: 4.9)
                 // Rating and ProgressBar
-                HStack {
-                    Text("Rating: 4.5")
-                        .foregroundColor(.green)
-
-                    Spacer()
-
-                    ProgressBar(value: 0.9)
-                        .frame(width: 200, height: 10)
-                }
+//                HStack {
+//                    Text("Rating: 4.5")
+//                        .foregroundColor(.green)
+//
+//                    Spacer()
+//
+//                    ProgressBar(value: 0.9)
+//                        .frame(width: 200, height: 10)
+//                }
 
                 // Tabs (Products, Services, Reviews)
                 Divider()
@@ -73,7 +74,7 @@ struct TabButton: View {
     var body: some View {
         Text(title)
             .font(.headline)
-            .foregroundColor(isSelected ? Color(red: 176/255, green: 8/255, blue: 20/255) : .black)
+            .foregroundColor(isSelected ? Color(red: 176/255, green: 8/255, blue: 20/255) : .primary)
             .padding(15)
             .background(
                 ZStack {

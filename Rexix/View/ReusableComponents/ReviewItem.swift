@@ -55,7 +55,7 @@ struct ReviewItem: View {
                 .foregroundColor(.primary)
 
             if showImage {
-                Image("CoverPhoto")
+                Image(item.image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(maxHeight: 300)

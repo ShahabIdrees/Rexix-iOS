@@ -39,7 +39,7 @@ struct ReviewTabItem: View {
             LikeDislikeView()
         }
         .padding()
-        .background(Color.white)
+        .background(Color(.systemBackground))
         .cornerRadius(10)
         .shadow(radius: 5)
     }

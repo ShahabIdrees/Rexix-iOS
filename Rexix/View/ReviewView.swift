@@ -112,7 +112,32 @@ import FirebaseFirestore
 import Combine
 
 class ReviewViewModel: ObservableObject {
-    @Published var reviewList: [Review] = []
+    @Published var reviewList: [Review] = [Review(
+        title: "Awesome day at the beach! 🌊☀️",
+        description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!",
+        rating: 3.8,
+        image: "15profront"
+    ),Review(
+        title: "Awesome day at the beach! 🌊☀️",
+        description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!",
+        rating: 3.8,
+        image: "15proback"
+    ),Review(
+        title: "Awesome day at the beach! 🌊☀️",
+        description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!",
+        rating: 3.8,
+        image: "15proleft"
+    ),Review(
+        title: "Awesome day at the beach! 🌊☀️",
+        description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!",
+        rating: 3.8,
+        image: "15proright"
+    ),Review(
+        title: "Awesome day at the beach! 🌊☀️",
+        description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!",
+        rating: 3.8,
+        image: "15proangled"
+    )]
     init() {
             let dummyReview = Review(
                 title: "Awesome day at the beach! 🌊☀️",

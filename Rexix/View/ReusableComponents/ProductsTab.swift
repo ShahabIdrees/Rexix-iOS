@@ -4,14 +4,14 @@ import SwiftUI
 
 struct ProductsTab: View {
     let products: [Product] = [
-        Product(name: "Macbook Pro 16\"", imageName: "CoverPhoto", rating: 4.2),
-        Product(name: "Macbook Air 15\"", imageName: "CoverPhoto", rating: 3.8),
-        Product(name: "Macbook Pro 14\"", imageName: "CoverPhoto", rating: 4.2),
-        Product(name: "Macbook Air 13\" M2", imageName: "CoverPhoto", rating: 3.8),
-        Product(name: "Macbook Air 13\" M1", imageName: "CoverPhoto", rating: 4.2),
-        Product(name: "Macbook Pro 13\"", imageName: "CoverPhoto", rating: 3.8),
-        Product(name: "Mac Mini", imageName: "CoverPhoto", rating: 4.2),
-        Product(name: "iPhone 15 Pro Max", imageName: "CoverPhoto", rating: 3.8),
+        Product(name: "Macbook Pro 16\"", imageName: "15profront", rating: 4.2),
+        Product(name: "Macbook Air 15\"", imageName: "15proback", rating: 3.8),
+        Product(name: "Macbook Pro 14\"", imageName: "15proleft", rating: 4.2),
+        Product(name: "Macbook Air 13\" M2", imageName: "15proright", rating: 3.8),
+        Product(name: "Macbook Air 13\" M1", imageName: "15protop", rating: 4.2),
+        Product(name: "Macbook Pro 13\"", imageName: "15probottom", rating: 3.8),
+        Product(name: "Mac Mini", imageName: "15proangled", rating: 4.2),
+        Product(name: "iPhone 15 Pro Max", imageName: "15proangled2", rating: 3.8),
     ]
     var body: some View {
         ScrollView {
