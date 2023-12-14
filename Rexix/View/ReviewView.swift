@@ -210,18 +210,15 @@ struct ReviewView: View {
                     }
                 }
             }
-            .background(Color.clear)
-            .listStyle(PlainListStyle())
             .navigationTitle("Rexix")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.automatic) // Use .automatic to let SwiftUI decide
             .navigationBarItems(trailing:
-                            NavigationLink(destination: NewReviewView()) {
-                                Image(systemName: "plus")
-                                    .foregroundColor(.blue)
-                                    .padding()
-                            }
-                        )
-        
+                                    NavigationLink(destination: NewReviewView()) {
+                Image(systemName: "plus")
+                    .foregroundColor(.blue)
+                    .padding()
+            }
+            )
     }
 }
 

@@ -34,6 +34,11 @@ struct ProfileView: View {
                     
                     CloseFriends()
                         .padding(.horizontal, 8)
+                    Divider()
+                    HStack{
+                        Text("Reviews").font(.title.bold()).padding(.horizontal, 16)
+                        Spacer()
+                    }
                     
                     ProfilePostsView(reviewPosts:[
                         Review(title: "Awesome day at the beach! 🌊☀️", description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!", rating: 4.9, image: "15proleft"),
@@ -41,12 +46,13 @@ struct ProfileView: View {
                         Review(title: "Delicious food adventures! 🍔🍕", description: "Absolutely delighted with my experience! From the friendly staff to the top-notch quality of products, every aspect exceeded my expectations. The positive energy in the environment created a wonderful atmosphere, making my visit truly enjoyable. An outstanding place that consistently delivers excellence.", rating: 2.9, image: "15protop"),
                     ])
                 }
-                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                .padding(.top)
                 .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
                 .frame(maxHeight: .infinity)
+               
             }
-            .navigationBarHidden(true)
-        
+            .navigationBarTitle("Shahab Idrees", displayMode: .automatic)
+
     }
 }
 

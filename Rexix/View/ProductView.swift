@@ -13,12 +13,14 @@ struct ProductView: View {
                 ProductStatsComponent(userCount: 290485, reviewCount: 148940, rating: 4.5)
 
                 ImageCarousel(images: self.images).padding(.horizontal, -10)
-
-                Text("Brand: Apple")
-                    .font(.headline)
-                    .padding(.leading)
-                    .padding(.top, 20)
-
+                NavigationLink(destination: BrandProfileView()){
+                    
+                    
+                    Text("Brand: Apple")
+                        .font(.headline)
+                        .padding(.leading)
+                        .padding(.top, 20)
+                }
 
                 Divider() // Add a divider for better separation
 
@@ -29,18 +31,18 @@ struct ProductView: View {
                 // You can format your specifications as a table or display as raw text
                 // Example of a simple table:
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Spec 1: Value 1")
-                    Text("Spec 2: Value 2")
-                    Text("Spec 3: Value 3")
+                    Text("128gb with A16 Bionic chip 6.1\" OLED display 6gb ram two day battery life with titanium frame and ceramic sheild with 50MP Main camera, 12MP Ultra-wide and 12 MP 5x zoom lens with internal sensor shift technology along with a LIDAR sensor to capture depth information")
+//                    Text("Spec 2: Value 2")
+//                    Text("Spec 3: Value 3")
                     // Add more specifications as needed
                 }
                 .padding(.leading)
                 Divider()
                 Text("Reviews").font(.title3)
-                ReviewItem(review: Review())
+                ReviewItem()
                 
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
 }

@@ -21,12 +21,11 @@ struct ProfilePostsView: View {
         ScrollView {
             LazyVStack(spacing: 16) {
                 ForEach(reviewPosts) { post in
-                    ReviewItem(review: post)
+                    NavigationLink(destination: ReviewDetailsView(currentReview: post)){ReviewItem(review: post)}
                 }
             }
             .padding()
         }
-        .navigationTitle("Posts") // Optionally set a navigation title
     }
 }
 

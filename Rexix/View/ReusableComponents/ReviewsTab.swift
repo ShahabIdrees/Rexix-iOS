@@ -39,7 +39,7 @@ struct ReviewsTab: View {
         ScrollView {
             VStack(spacing: 16) {
                 ForEach(reviews) { review in
-                    ReviewTabItem(review: review)
+                    ReviewItem(review: review)
                 }
             }
             .padding()

@@ -23,14 +23,26 @@ struct CloseFriends: View {
             
             VStack{
                 HStack(alignment: .top) {
-                    FriendComponent(name: "Ebad Ullah", imageName: "Person1")
-                    FriendComponent(name: "Dawood Ahm", imageName: "Person2")
-                    FriendComponent(name: "Abadullah Ad", imageName: "Person3")
+                    NavigationLink(destination: ProfileView(), label: {
+                        FriendComponent(name: "Ebad Ullah", imageName: "Person1")
+                    })
+                    NavigationLink(destination: ProfileView(), label: {
+                        FriendComponent(name: "Dawood Ahm", imageName: "Person2")
+                    })
+                    NavigationLink(destination: ProfileView(), label: {
+                        FriendComponent(name: "Abadullah Ad", imageName: "Person3")
+                    })
                 }.frame(maxWidth: .infinity)
                 HStack(alignment: .top, spacing: 10) {
-                    FriendComponent(name: "Suleman Aw", imageName: "Person4")
-                    FriendComponent(name: "Muhammad S" , imageName: "Person5")
-                    FriendComponent(name: "Saad Chattha" , imageName: "Person6")
+                    NavigationLink(destination: ProfileView(), label: {
+                        FriendComponent(name: "Suleman Aw", imageName: "Person4")
+                    })
+                    NavigationLink(destination: ProfileView(), label: {
+                        FriendComponent(name: "Muhammad S" , imageName: "Person5")
+                    })
+                    NavigationLink(destination: ProfileView(), label: {
+                        FriendComponent(name: "Saad Chattha" , imageName: "Person6")
+                    })
                 }
                 
             }.frame(maxWidth: .infinity)

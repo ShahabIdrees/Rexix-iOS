@@ -44,15 +44,30 @@ struct ReviewItem: View {
             .padding(.bottom, 5)
 
             Divider()
+            
+            VStack(alignment: .leading, spacing: 2) {
+                NavigationLink(destination: ProductView()) {
+                    Text("Iphone 15 Pro Max")
+                        .font(.body.bold())
+                        .foregroundColor(.primary)
+                }
+                NavigationLink(destination: BrandProfileView()) {
+                    Text("Apple")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
 
             Text(item.title)
                 .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor(.primary)
+                .multilineTextAlignment(.leading)
 
-            Text(item.description.prefix(150))
-                .font(.body)
+            Text(item.description.prefix(120))
+                .font(.system(size: 14))
                 .foregroundColor(.primary)
+                .multilineTextAlignment(.leading)
 
             if showImage {
                 Image(item.image)

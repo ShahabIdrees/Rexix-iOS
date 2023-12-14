@@ -21,7 +21,7 @@ struct ContentView: View {
     }
     
     var body: some View{
-        NavigationView {
+       
             
             
             if !isLoggedIn {
@@ -33,16 +33,26 @@ struct ContentView: View {
                         TabView(selection: $selectedTab) {
                             switch selectedTab {
                             case .house:
-                                HomeView()
+                                NavigationStack {
+                                    HomeView()
+                                }
                             case .message:
-                                ReviewView()
+                                NavigationStack {
+                                    ReviewView()
+                                }
                             case .person:
-                                ProfileView()
+                                NavigationStack {
+                                    ProfileView()
+                                }
                             case .magnifyingglass:
                                 //SignupView(isLoggedIn: self.$isLoggedIn)
-                                SearchView()
+                                NavigationStack {
+                                    SearchView()
+                                }
                             case .gearshape:
-                                SettingsView()
+                                NavigationStack {
+                                    SettingsView()
+                                }
                             }
                         }
                     }
@@ -51,7 +61,7 @@ struct ContentView: View {
                         CustomTabBar(selectedTab: $selectedTab).offset(y:25)
                     }
                 }
-            }
+            
         }
         
         

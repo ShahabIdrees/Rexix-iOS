@@ -61,7 +61,7 @@ struct BrandProfileView: View {
                 }
                 .padding(20)
             }
-            .navigationBarTitle("Brand Profile", displayMode: .inline)
+            .navigationBarTitle("Apple", displayMode: .inline)
         
     }
 }

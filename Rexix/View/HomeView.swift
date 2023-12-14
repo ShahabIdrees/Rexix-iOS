@@ -1,24 +1,29 @@
 import SwiftUI
 
+extension String: Identifiable{
+    public var id: UUID {
+        UUID()
+    }
+}
 struct HomeView: View {
     @State private var selectedTab: Tab = .house
-    
+    let categories: [String] = ["Electronics", "Mobile Phones", "PCs & Laptops", "Healthcare", "Dining"]
     let products: [Product] = [
         Product(
             name: "iPhone 15 pro",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             imageName: "15proback",
             rating: 4.9,
             brand: "Apple"),
         Product(
             name: "iPad pro",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             imageName: "15proleft",
             rating: 4.9,
             brand: "Apple"),
         Product(
             name: "Macbook pro 16\"",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
             imageName: "15probottom",
             rating: 4.9,
             brand: "Apple"),
@@ -27,13 +32,13 @@ struct HomeView: View {
     var otherProducts: [Product] = [
         Product(
             name: "Apple watch ultra",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             imageName: "15proangled",
             rating: 4.9,
             brand: "Apple"),
         Product(
             name: "Airpods Pro",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             imageName: "15proangled2",
             rating: 4.9,
             brand: "Apple"),
@@ -41,7 +46,7 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        NavigationView{
+        
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 20) {
                 Text("Top products")
@@ -52,7 +57,9 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(products) { item in
-                            ProductItemView(product: item)
+                            NavigationLink(destination: ProductView()) {
+                                ProductItemView(product: item).padding(.top, 5)
+                            }
                         }
                     }
                     .padding(.horizontal, 20) // Adjusted horizontal padding
@@ -70,9 +77,10 @@ struct HomeView: View {
                     .padding(.leading, 20)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
+                    HStack(spacing: 10) {
                         ForEach(products) { item in
-                            ReviewItem( review: Review(title: "Delicious food adventures! 🍔🍕", description: "Absolutely delighted with my experience! From the friendly staff to the top-notch quality of products, every aspect exceeded my expectations. The positive energy in the environment created a wonderful atmosphere, making my visit truly enjoyable. An outstanding place that consistently delivers excellence.", rating: 2.9, image: "CoverPhoto"), showImage: false)
+                            NavigationLink(destination: ReviewDetailsView(currentReview: Review())){
+                                ReviewItem( review: Review(title: "Delicious food adventures! 🍔🍕", description: "Absolutely delighted with my experience! From the friendly staff to the top-notch quality of products, every aspect exceeded my expectations. The positive energy in the environment created a wonderful atmosphere, making my visit truly enjoyable. An outstanding place that consistently delivers excellence.", rating: 2.9, image: "CoverPhoto"), showImage: false)}
                         }
                     }
                     .padding(.horizontal, 20)
@@ -89,14 +97,14 @@ struct HomeView: View {
                     .padding(.leading, 20)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(products) { item in
-                            CategoryCardView(product: item)
+                    HStack(spacing: 10) {
+                        ForEach(categories) { item in
+                            CategoryCardView(category: item)
                         }
                     }
                     .padding(.horizontal, 20)
-                    .padding(.bottom, 30)
-                }
+                    .padding(.vertical, 10)
+                }.frame(minHeight: 170)
             }
             
             Divider()
@@ -109,8 +117,10 @@ struct HomeView: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(otherProducts) { item in
-                        ProductItemView(product: item)
-                            .padding(.bottom, 5) // Increased bottom padding
+                        NavigationLink(destination: ProductView()) {
+                            ProductItemView(product: item)
+                                .padding(.bottom, 5)
+                        }
                     }
                     .padding(.horizontal, 20)
                 }
@@ -126,7 +136,7 @@ struct HomeView: View {
                 .padding()
         }
         )
-    }
+    
         
     }
 }
