@@ -143,7 +143,7 @@ class ReviewViewModel: ObservableObject {
                 title: "Awesome day at the beach! 🌊☀️",
                 description: "Exceptional service! From the moment I entered, the staff's warm welcome set the tone for a delightful experience. The attention to detail and the quality of products exceeded my expectations. A positive atmosphere coupled with impeccable service makes this place a standout. Can't wait to return!",
                 rating: 3.8,
-                image: "CoverPhoto"
+                image: "15proleft"
             )
             
         let db = Firestore.firestore()

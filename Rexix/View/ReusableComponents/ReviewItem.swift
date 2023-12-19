@@ -31,14 +31,17 @@ struct ReviewItem: View {
                         .foregroundColor(.secondary)
                 }
                 Spacer()
-                Text(String(item.rating))
-                    .foregroundColor(.white)
-                    .font(.system(size: 18, weight: .bold))
-                    .padding(8)
-                    .background(
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .foregroundColor(getRatingColor(rating: item.rating))
-                    )
+                VStack(alignment: .trailing, spacing: 0){
+                    Text(String(item.rating))
+                        .foregroundColor(getRatingColor(rating: item.rating))
+                        .font(.system(size: 18, weight: .bold))
+                        
+                    Text("1k+ ratings").foregroundColor(.secondary).font(.subheadline)
+                }
+//                    .background(
+//                        RoundedRectangle(cornerRadius: 5.0)
+//                            .foregroundColor(getRatingColor(rating: item.rating))
+//                    )
                     .zIndex(1)
             }
             .padding(.bottom, 5)
@@ -46,10 +49,14 @@ struct ReviewItem: View {
             Divider()
             
             VStack(alignment: .leading, spacing: 2) {
-                NavigationLink(destination: ProductView()) {
-                    Text("Iphone 15 Pro Max")
-                        .font(.body.bold())
-                        .foregroundColor(.primary)
+                HStack{
+                    NavigationLink(destination: ProductView()) {
+                        Text("Iphone 15 Pro Max")
+                            .font(.body.bold())
+                            .foregroundColor(.primary)
+                    }
+                    Spacer()
+                    Text("$999").padding(.horizontal, 5)
                 }
                 NavigationLink(destination: BrandProfileView()) {
                     Text("Apple")

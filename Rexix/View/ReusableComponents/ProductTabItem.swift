@@ -26,17 +26,18 @@ struct ProductTabItem: View {
                 Text(product.name)
                     .font(.headline)
                     .fontWeight(.bold)
+                    .foregroundColor(.primary)
 
                 // Product Category
                 Text("Product.Category")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.primary)
 
                 // Product Rating
                 HStack {
                     Text("Rating:")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.primary)
 
                     Text(String(format: "%.1f", product.rating))
                         .font(.caption)
