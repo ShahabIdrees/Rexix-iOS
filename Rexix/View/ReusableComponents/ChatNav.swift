@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatNav: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 12)
@@ -16,7 +17,8 @@ struct ChatNav: View {
                         .frame(height: 50)
             HStack(spacing: 12){
                 Button {
-                    print("back pressed")
+                    presentationMode.wrappedValue.dismiss()
+                    
                 } label: {
                     Image(systemName: "arrow.backward")
                 }

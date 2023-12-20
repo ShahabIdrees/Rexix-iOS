@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ChatScreen: View {
+    @State var message: String =  ""
+    @State private var selectedTab: Tab = .person
     var messages: [String] = ["!", "How are you", "What's up", "How You doing", "ok but how will I be able to look like a pro even though I am not even competent enough to sit in front of the computer", "You gotta Find out", "!", "How are you", "What's up", "How You doing", "ok but how will I be able to look like a pro even though I am not even competent enough to sit in front of the computer", "You gotta Find out"]
     
     var sections: [SectionModel] = [
@@ -41,7 +43,27 @@ struct ChatScreen: View {
                 UITableView.appearance().separatorStyle = .singleLine
             }
             .listStyle(PlainListStyle())
-        }
+            HStack(alignment: .center){
+                HStack(alignment: .bottom, spacing: 8){
+                    Image(systemName:"theatermasks.circle").font(.title)
+                    TextField("Message", text: $message).padding(.bottom, 5)
+                    Image(systemName: "paperclip").font(.title3).padding(.bottom, 2)
+                    Image(systemName: "camera").font(.title3).padding(.bottom, 5)
+                }
+                .padding(10)
+                .overlay(content: {
+                    RoundedRectangle(cornerRadius: 30).stroke()
+                })
+                Button {
+                    print("send Pressed")
+                } label: {
+                    ZStack{
+                        Image(systemName: message.isEmpty ? "mic.fill" : "paperplane.fill").padding(12).foregroundColor(.white).font(.title3)
+                    }.background(.primary).clipped().clipShape(Circle())
+                }
+
+            }.padding(.horizontal, 10)
+        }.navigationBarHidden(true)
     }
 }
 

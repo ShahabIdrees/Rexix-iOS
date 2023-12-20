@@ -53,7 +53,6 @@ struct ReplyItem: View {
                         Text("\(68)")
                             .foregroundColor(.gray)
                     }
-
                     // Dislike button
                     Button(action: {
                         isDisliked.toggle()

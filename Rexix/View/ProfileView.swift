@@ -6,7 +6,7 @@ struct ProfileView: View {
     
     var body: some View {
             ScrollView {
-                VStack {
+                VStack(spacing: 5) {
                     Image("CoverPhoto")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -17,7 +17,44 @@ struct ProfileView: View {
                     ProfileImageCircular()
                         .offset(y: -profileImageSize / 2)
                         .padding(.bottom, -profileImageSize / 2 + 20)
-                    
+                    HStack(spacing: 10){
+                        Spacer()
+                        HStack(spacing: 10){
+                            Spacer()
+                            Image(systemName: "person.fill")
+                                .font(.title3)
+                                .padding(.leading, 12)
+                                .padding(.vertical, 12)
+                                .foregroundColor(.white)
+                            Text("Follow")
+                                .font(.title3)
+                                .padding(.trailing, 12)
+                                .padding(.vertical, 12)
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
+                            .background(Color(.systemBlue))
+                            .cornerRadius(12)
+                            .frame(width: 150)
+                        
+                        NavigationLink(destination: ChatScreen()) {
+                            HStack{
+                                Image(systemName: "bolt.horizontal.circle.fill")
+                                    .font(.title)
+                                    .padding(.leading, 12)
+                                    .padding(.vertical, 8)
+                                    .foregroundColor(.white)
+                                Text("Message")
+                                    .font(.title3)
+                                    .padding(.trailing, 12)
+                                    .padding(.vertical, 8)
+                                    .foregroundColor(.white)
+                            }
+                            .background(Color(.systemBlue))
+                            .cornerRadius(12)
+                        }
+                        Spacer()
+                    }
                     NavigationLink(
                         destination: FollowersView(),
                         isActive: $isFollowersViewActive,
