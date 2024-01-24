@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		180DF89B2B23450600F3D023 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DF89A2B23450600F3D023 /* SearchView.swift */; };
+		182040D62B3ADF0700C2B9F2 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182040D52B3ADF0700C2B9F2 /* NotificationsView.swift */; };
+		182040D82B3AE14A00C2B9F2 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182040D72B3AE14A00C2B9F2 /* NotificationItem.swift */; };
+		182040DA2B3AE17C00C2B9F2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182040D92B3AE17C00C2B9F2 /* Notification.swift */; };
 		18249E612B2C644A0013E8A1 /* ShowLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18249E602B2C644A0013E8A1 /* ShowLocationView.swift */; };
 		183EE0792B32C7DC00094332 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EE0782B32C7DC00094332 /* ChatScreen.swift */; };
 		184BF0152B219C4F00A4DF04 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF0142B219C4F00A4DF04 /* ProfileView.swift */; };
@@ -70,6 +73,9 @@
 
 /* Begin PBXFileReference section */
 		180DF89A2B23450600F3D023 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		182040D52B3ADF0700C2B9F2 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		182040D72B3AE14A00C2B9F2 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		182040D92B3AE17C00C2B9F2 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		18249E602B2C644A0013E8A1 /* ShowLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationView.swift; sourceTree = "<group>"; };
 		183EE0782B32C7DC00094332 /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		184BF0142B219C4F00A4DF04 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 				18E72BF22AF92A2C00D73827 /* Product.swift */,
 				185C82C82AFA29F400091481 /* Review.swift */,
 				18B87A0E2B03B0F80019D1F7 /* Reply.swift */,
+				182040D92B3AE17C00C2B9F2 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 				1851FB052B29CAE10036428E /* NewReviewView.swift */,
 				18249E602B2C644A0013E8A1 /* ShowLocationView.swift */,
 				183EE0782B32C7DC00094332 /* ChatScreen.swift */,
+				182040D52B3ADF0700C2B9F2 /* NotificationsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				18D9417E2B31B3CB00BE0CD5 /* ChatNav.swift */,
 				18D941802B31B6B900BE0CD5 /* MessageItem.swift */,
 				18D941822B31D1C200BE0CD5 /* MessageDateHeader.swift */,
+				182040D72B3AE14A00C2B9F2 /* NotificationItem.swift */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -360,6 +369,8 @@
 				184BF01F2B21CAA600A4DF04 /* UserPostsComponent.swift in Sources */,
 				18B87A0F2B03B0F80019D1F7 /* Reply.swift in Sources */,
 				185C82CD2AFA49E200091481 /* ReviewView.swift in Sources */,
+				182040DA2B3AE17C00C2B9F2 /* Notification.swift in Sources */,
+				182040D82B3AE14A00C2B9F2 /* NotificationItem.swift in Sources */,
 				18C24E7A2AFBA690004CB648 /* customProgressBar.swift in Sources */,
 				18E2860F2B299A4E00BF291C /* BrandStatsComponent.swift in Sources */,
 				18CD3E0D2B27472300DB30D0 /* ProductItemView.swift in Sources */,
@@ -381,6 +392,7 @@
 				18CB3BD92AF8C02E00905CA4 /* Rexix.xcdatamodeld in Sources */,
 				18D941832B31D1C200BE0CD5 /* MessageDateHeader.swift in Sources */,
 				18E72BF12AF9212B00D73827 /* HomeView.swift in Sources */,
+				182040D62B3ADF0700C2B9F2 /* NotificationsView.swift in Sources */,
 				18CB3BCD2AF8C02C00905CA4 /* RexixApp.swift in Sources */,
 				180DF89B2B23450600F3D023 /* SearchView.swift in Sources */,
 				1878ED8B2AF8F37300D3D068 /* ContentViewModel.swift in Sources */,

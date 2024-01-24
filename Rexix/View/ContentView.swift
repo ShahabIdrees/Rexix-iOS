@@ -49,6 +49,10 @@ struct ContentView: View {
                                 NavigationStack {
                                     SearchView()
                                 }
+                            case .bell:
+                                NavigationStack{
+                                    NotificationsView()
+                                }
                             case .gearshape:
                                 NavigationStack {
                                     SettingsView()

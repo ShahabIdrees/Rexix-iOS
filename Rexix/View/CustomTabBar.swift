@@ -12,6 +12,7 @@ enum Tab: String, CaseIterable{
     case message
     case person
     case magnifyingglass
+    case bell
     case gearshape
 }
 
